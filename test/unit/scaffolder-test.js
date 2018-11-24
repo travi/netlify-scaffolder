@@ -20,4 +20,10 @@ suite('scaffolder', () => {
 
     assert.deepEqual(results.environmentVariables.ci, ['NETLIFY_SITE_ID', 'NETLIFY_ACCESS_TOKEN']);
   });
+
+  test('that the netlify directory is ignored from version-cpntrol', async () => {
+    const results = await scaffold({buildDirectory});
+
+    assert.deepEqual(results.vcsIgnore.directories, ['/.netlify/']);
+  });
 });
