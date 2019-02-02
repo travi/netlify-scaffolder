@@ -36,10 +36,10 @@
     }
   },
   "devDependencies": {
+    "@babel/register": "^7.0.0",
     "@travi/any": "^1.8.2",
+    "@travi/babel-preset": "^3.0.0",
     "@travi/eslint-config-travi": "^1.8.0",
-    "babel-preset-travi": "^1.0.0-beta.1",
-    "babel-register": "^6.26.0",
     "ban-sensitive-files": "^1.9.2",
     "chai": "^4.2.0",
     "codecov": "^3.1.0",
