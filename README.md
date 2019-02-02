@@ -1,7 +1,5 @@
 # netlify-scaffolder
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/travi/netlify-scaffolder.svg)](https://greenkeeper.io/)
-
 host scaffolder for static sites hosted on [Netlify](https://www.netlify.com/)
 
 <!-- status badges -->
@@ -27,6 +25,7 @@ $ npm install @travi/netlify-scaffolder --prod
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/netlify-scaffolder.svg)](https://greenkeeper.io/)
 
 ### Dependencies
 
