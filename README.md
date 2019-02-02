@@ -1,5 +1,7 @@
 # netlify-scaffolder
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/netlify-scaffolder.svg)](https://greenkeeper.io/)
+
 host scaffolder for static sites hosted on [Netlify](https://www.netlify.com/)
 
 <!-- status badges -->
