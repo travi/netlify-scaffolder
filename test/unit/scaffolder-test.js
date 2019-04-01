@@ -10,7 +10,7 @@ suite('scaffolder', () => {
 
     assert.equal(
       results.scripts.deploy,
-      `netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=./${buildDirectory}/ --prod`
+      `netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=${buildDirectory}/ --prod`
     );
     assert.deepEqual(results.devDependencies, ['netlify-cli']);
   });
