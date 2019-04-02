@@ -8,9 +8,12 @@ suite('scaffolder', () => {
   test('that the deploy script is defined', async () => {
     const results = await scaffold({buildDirectory});
 
-    assert.equal(
-      results.scripts.deploy,
-      `netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=${buildDirectory}/ --prod`
+    assert.deepEqual(
+      results.scripts,
+      {
+        predeploy: 'run-s build',
+        deploy: `netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=${buildDirectory}/ --prod`
+      }
     );
     assert.deepEqual(results.devDependencies, ['netlify-cli']);
   });
