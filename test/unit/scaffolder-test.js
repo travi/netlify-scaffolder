@@ -11,17 +11,11 @@ suite('scaffolder', () => {
     assert.deepEqual(
       results.scripts,
       {
-        predeploy: 'run-s build',
-        deploy: `netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=${buildDirectory}/ --prod`
+        'predeploy:netlify': 'run-s build',
+        'deploy:netlify': `netlify deploy --dir=${buildDirectory}/ --prod`
       }
     );
     assert.deepEqual(results.devDependencies, ['netlify-cli']);
-  });
-
-  test('that the required ci environment variables are listed', async () => {
-    const results = await scaffold({buildDirectory});
-
-    assert.deepEqual(results.environmentVariables.ci, ['NETLIFY_SITE_ID', 'NETLIFY_ACCESS_TOKEN']);
   });
 
   test('that the netlify directory is ignored from version-cpntrol', async () => {
