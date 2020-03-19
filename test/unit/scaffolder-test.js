@@ -12,10 +12,9 @@ suite('scaffolder', () => {
       results.scripts,
       {
         'predeploy:netlify': 'run-s build',
-        'deploy:netlify': `netlify deploy --dir=${buildDirectory}/ --prod`
+        'deploy:netlify': `npx --package netlify-cli netlify deploy --dir=${buildDirectory}/ --prod`
       }
     );
-    assert.deepEqual(results.devDependencies, ['netlify-cli']);
   });
 
   test('that the netlify directory is ignored from version-cpntrol', async () => {
