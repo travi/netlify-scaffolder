@@ -12,7 +12,7 @@ suite('scaffolder', () => {
       results.scripts,
       {
         'predeploy:netlify': 'run-s build',
-        'deploy:netlify': `npx --package netlify-cli netlify deploy --dir=${buildDirectory}/ --prod`
+        'deploy:netlify': `npx --package netlify-cli netlify deploy --dir=${buildDirectory}/`
       }
     );
   });
