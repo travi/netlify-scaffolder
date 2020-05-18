@@ -39,7 +39,7 @@
     "@babel/register": "7.9.0",
     "@travi/any": "2.0.0",
     "@travi/babel-preset": "3.0.19",
-    "@travi/eslint-config-travi": "1.8.0",
+    "@travi/eslint-config-travi": "1.8.8",
     "ban-sensitive-files": "1.9.2",
     "chai": "4.2.0",
     "codecov": "3.6.5",
