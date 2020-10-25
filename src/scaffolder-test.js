@@ -1,6 +1,6 @@
 import {assert} from 'chai';
 import any from '@travi/any';
-import {scaffold} from '../../src';
+import {scaffold} from './index';
 
 suite('scaffolder', () => {
   const buildDirectory = any.string();
