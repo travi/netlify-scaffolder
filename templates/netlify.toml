@@ -1,0 +1,8 @@
+[[headers]]
+for = "/*"
+[headers.values]
+X-XSS-Protection = "1; mode=block"
+X-Frame-Options = "DENY"
+Referrer-Policy = "same-origin,strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'

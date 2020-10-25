@@ -28,7 +28,8 @@
     "access": "public"
   },
   "files": [
-    "lib/"
+    "lib/",
+    "templates/"
   ],
   "config": {
     "commitizen": {
