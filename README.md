@@ -4,7 +4,6 @@ host scaffolder for static sites hosted on [Netlify](https://www.netlify.com/)
 
 <!--status-badges start -->
 
-[![Build Status][github-actions-ci-badge]][github-actions-ci-link]
 [![Codecov][coverage-badge]][coverage-link]
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 
