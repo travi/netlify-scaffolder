@@ -1,14 +1,14 @@
 {
   "name": "@travi/netlify-scaffolder",
   "description": "host scaffolder for static sites hosted on Netlify",
-  "version": "0.0.0-semantically-released",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
   "license": "MIT",
+  "version": "0.0.0-semantically-released",
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/netlify-scaffolder",
   "bugs": "https://github.com/travi/netlify-scaffolder/issues",
   "homepage": "https://npm.im/@travi/netlify-scaffolder",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
   "scripts": {
     "clean": "rimraf lib/",
     "lint:md": "remark . --frail",
@@ -16,20 +16,20 @@
     "lint:sensitive": "ban",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:unit:base": "mocha 'src/**/*-test.js'",
-    "test:unit": "nyc run-s test:unit:base",
-    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test:unit": "cross-env NODE_ENV=test c8 run-s test:unit:base",
     "build": "run-s clean build:*",
     "build:js": "rollup -c",
     "watch": "run-s 'build:js -- --watch'",
-    "prepack": "run-s build"
-  },
-  "publishConfig": {
-    "access": "public"
+    "prepack": "run-s build",
+    "prepare": "husky install"
   },
   "files": [
     "lib/",
     "templates/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -42,20 +42,19 @@
     "@travi/eslint-config": "3.0.17",
     "@travi/eslint-config-mocha": "1.0.19",
     "ban-sensitive-files": "1.9.18",
+    "c8": "7.12.0",
     "chai": "4.3.7",
-    "codecov": "3.8.3",
     "commitlint-config-travi": "1.4.21",
+    "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "8.0.3",
     "mocha": "10.2.0",
     "npm-run-all": "4.1.5",
-    "nyc": "15.1.0",
     "remark-cli": "11.0.0",
     "remark-preset-lint-travi": "4.0.2",
     "rimraf": "3.0.2",
     "rollup": "3.9.1",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "15.0.1"
-  },
-  "dependencies": {}
+  }
 }
