@@ -14,6 +14,7 @@
     "lint:md": "remark . --frail",
     "lint:js": "eslint . --cache",
     "lint:sensitive": "ban",
+    "pretest": "run-s build",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:unit:base": "mocha 'src/**/*-test.js'",
     "test:unit": "cross-env NODE_ENV=test c8 run-s test:unit:base",
