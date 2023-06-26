@@ -28,7 +28,8 @@
     "templates/"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "config": {
     "commitizen": {
